@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox spacing="25.0" style="-fx-background-color: transparent;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ExercisesController">
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+   <children>
+      
+    
+      <VBox spacing="15.0" styleClass="card" HBox.hgrow="NEVER" prefWidth="320.0">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <Label styleClass="label-header" text="Hareketler" />
+            
+            <TextField fx:id="txtSearch" promptText="Hareket ara (örn: Squat)..." style="-fx-background-color: #2C2C2E; -fx-text-fill: white; -fx-padding: 10px; -fx-background-radius: 8px;" />
+            
+            <ListView fx:id="listExercises" VBox.vgrow="ALWAYS" style="-fx-background-color: transparent; -fx-control-inner-background: #1C1C1E; -fx-text-fill: white; -fx-font-size: 14px;" />
+         </children>
+      </VBox>
+      
+      
+      <VBox spacing="20.0" styleClass="card" HBox.hgrow="ALWAYS">
+         <padding>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+         </padding>
+         <children>
+            <Label fx:id="lblExerciseName" style="-fx-text-fill: white; -fx-font-size: 32px; -fx-font-weight: bold;" text="Kütüphaneye Hoş Geldin" />
+            
+            <HBox spacing="15.0">
+                <Label style="-fx-text-fill: #A0A0A0; -fx-font-weight: bold; -fx-font-size: 16px;" text="Hedef Kas:" />
+                <Label fx:id="lblMuscleGroup" style="-fx-text-fill: #0A84FF; -fx-font-weight: bold; -fx-font-size: 16px;" text="-" />
+            </HBox>
+
+           
+            <ImageView fx:id="imgExerciseGif" fitHeight="280.0" fitWidth="450.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </ImageView>
+            
+            <Label style="-fx-text-fill: #A0A0A0; -fx-font-weight: bold; -fx-font-size: 16px; -fx-padding: 10 0 5 0;" text="Nasıl Yapılır &amp; Form İpuçları" />
+            
+            <Label fx:id="lblInstructions" alignment="TOP_LEFT" style="-fx-text-fill: #D1D1D6; -fx-font-size: 15px; -fx-line-spacing: 8px;" text="Listeden bir hareket seçtiğinde, bu hareketin doğru formu ve detaylı rehberi burada görüntülenecektir." wrapText="true" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+      
+   </children>
+</HBox>
